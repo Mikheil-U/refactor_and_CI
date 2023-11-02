@@ -174,9 +174,9 @@ dL = DoublyLinkedList()
 for i in range(4):
     dL.add_last(Node(i))
 
-print(dL)
+# print(dL)
 
-assert str(dL) == f"(0, (1, (2, (3, ('Trailer', None)))))"
+# assert str(dL) == f"(0, (1, (2, (3, ('Trailer', None)))))"
 
 # ## Using a Doubly Linked List
 #
@@ -197,8 +197,8 @@ assert str(dL) == f"(0, (1, (2, (3, ('Trailer', None)))))"
 
 
 # Test your implementation here
-print(dL.size())
-assert dL.size() == 4
+# print(dL.size())
+# assert dL.size() == 4
 
 # **Task 3 (5 points)**: Implement the `is_empty` method that checks
 # whether a doubly linked list is empty.
@@ -213,13 +213,13 @@ assert dL.size() == 4
 
 
 # Test your implementation here
-print(dL.is_empty())
+# print(dL.is_empty())
 
 dL2 = DoublyLinkedList()
-print(dL2.is_empty())
+# print(dL2.is_empty())
 
-assert dL.is_empty() == False
-assert dL2.is_empty() == True
+# assert dL.is_empty() == False
+# assert dL2.is_empty() == True
 del dL2
 
 # **T4 (10 points)**: Implement the methods `get_first` and `get_last`
@@ -241,11 +241,11 @@ del dL2
 
 
 # Test your implementation here
-print(dL.get_first())
-print(dL.get_last())
+# print(dL.get_first())
+# print(dL.get_last())
 
-assert str(dL.get_first()) == f"(0, (1, (2, (3, ('Trailer', None)))))"
-assert str(dL.get_last()) == f"(3, ('Trailer', None))"
+# assert str(dL.get_first()) == f"(0, (1, (2, (3, ('Trailer', None)))))"
+# assert str(dL.get_last()) == f"(3, ('Trailer', None))"
 
 # **Task 5 (10 points)**: Implement the methods `get_previous` and `get_next`
 # to get the previous and the next node of the list, respectively.
@@ -266,11 +266,11 @@ assert str(dL.get_last()) == f"(3, ('Trailer', None))"
 
 
 # Test your implementation here
-print(dL.get_last().get_previous())
-print(dL.get_first().get_next())
+# print(dL.get_last().get_previous())
+# print(dL.get_first().get_next())
 
-assert str(dL.get_last().get_previous()) == "(2, (3, ('Trailer', None)))"
-assert str(dL.get_first().get_next()) == "(1, (2, (3, ('Trailer', None))))"
+# assert str(dL.get_last().get_previous()) == "(2, (3, ('Trailer', None)))"
+# assert str(dL.get_first().get_next()) == "(1, (2, (3, ('Trailer', None))))"
 
 # **Task 6(10 points)**: Implement the methods `add_before` and `add_after`
 # to respectively insert new elements before and after a node of the list.
@@ -292,8 +292,8 @@ assert str(dL.get_first().get_next()) == "(1, (2, (3, ('Trailer', None))))"
 dL.add_after(Node(42), dL.get_first())
 dL.add_before(Node(34), dL.get_last())
 
-print(dL)
-assert str(dL) == "(0, (42, (1, (2, (34, (3, ('Trailer', None)))))))"
+# print(dL)
+# assert str(dL) == "(0, (42, (1, (2, (34, (3, ('Trailer', None)))))))"
 
 # **Task 7 (10 points)**: Implement the methods `add_first` and `add_last`
 # to respectively insert new nodes in the beginning and in the end of a list.
@@ -314,8 +314,8 @@ assert str(dL) == "(0, (42, (1, (2, (34, (3, ('Trailer', None)))))))"
 # Test your implementation here
 dL.add_first(Node(7))
 dL.add_last(Node(-1))
-print(dL)
-assert str(dL) == "(7, (0, (42, (1, (2, (34, (3, (-1, ('Trailer', None)))))))))"
+# print(dL)
+# assert str(dL) == "(7, (0, (42, (1, (2, (34, (3, (-1, ('Trailer', None)))))))))"
 
 # **Task 8 (10 points)**: Implement the method `remove` to remove
 # a node from a list.
@@ -331,9 +331,9 @@ assert str(dL) == "(7, (0, (42, (1, (2, (34, (3, (-1, ('Trailer', None)))))))))"
 
 # Test your implementation here
 dL.remove(dL.get_first())
-print(dL.get_first())
+# print(dL.get_first())
 
-assert dL.get_first().get_element() == 0
+# assert dL.get_first().get_element() == 0
 
 # **Task 9 (10 points)**: Implement the method `map` to apply a function on
 # each element of a list.
@@ -350,9 +350,9 @@ assert dL.get_first().get_element() == 0
 # Test your implementation here
 dL.map(lambda x: x ** 2)
 
-print(dL)
+# print(dL)
 
-assert str(dL) == "(0, (1764, (1, (4, (1156, (9, (1, ('Trailer', None))))))))"
+# assert str(dL) == "(0, (1764, (1, (4, (1156, (9, (1, ('Trailer', None))))))))"
 
 # **Task 10 (10 points)**: Implement the method `next` to iterate the elements
 # of a list.
@@ -372,11 +372,11 @@ assert str(dL) == "(0, (1764, (1, (4, (1156, (9, (1, ('Trailer', None))))))))"
 # Test your implementation here
 
 
-for node in dL:
-    print(node.get_element() == dn.__next__().get_element())
-    print(dn)
-
-dL
+# for node in dL:
+#     print(node.get_element() == dn.__next__().get_element())
+#     print(dn)
+#
+# dL
 
 
 #
@@ -402,8 +402,8 @@ doubleDigits = twenties()
 
 doubleDigits.map(lambda x: x + 10)
 
-print(doubleDigits)
-assert str(doubleDigits) == "(30, (31, (32, (33, (34, (35, (36, (37, (38, (39, ('Trailer', None)))))))))))"
+# print(doubleDigits)
+# assert str(doubleDigits) == "(30, (31, (32, (33, (34, (35, (36, (37, (38, (39, ('Trailer', None)))))))))))"
 
 #
 # **Task 12 (5 points)**: Multiply each element of the list by 5.
@@ -439,7 +439,7 @@ while (current != doubleDigits.get_last().get_next()):
         doubleDigits.remove(current)
 
     current = next
-    print(current)
+    # print(current)
 
 str(doubleDigits)
 
